@@ -78,23 +78,25 @@
         android:id="@+id/dropList"
         android:layout_width="113dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numUSD" />
+        app:layout_constraintTop_toBottomOf="@+id/numUSD"
+        app:layout_constraintVertical_bias="0.32999998" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="137dp"
         android:layout_height="50dp"
-        android:layout_marginTop="52dp"
         android:text="Convert to : "
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dropList"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numUSD" />
+        app:layout_constraintTop_toBottomOf="@+id/numUSD"
+        app:layout_constraintVertical_bias="0.32999998" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
