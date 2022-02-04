@@ -17,12 +17,13 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
 
+    Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Adding a drop list
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
 
         List<String> currencies = new ArrayList<String>();
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         //Checking the selected option by the user
         if(item.equals("USD")) convertToUSD(view);
         else if(item.equals("LBP")) convertToLBP(view);
-        
+        spinner.setSelection(0);
 
     }
     //Needed to iherit this function due to the implementation of the interface
