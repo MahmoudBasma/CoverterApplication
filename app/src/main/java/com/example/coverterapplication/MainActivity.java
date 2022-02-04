@@ -22,8 +22,9 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Adding a drop list
-        Spinner spinner = (Spinner) findViewById(R.id.dropList);
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+
         List<String> currencies = new ArrayList<String>();
         currencies.add("USD"); currencies.add("LBP");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, currencies);
