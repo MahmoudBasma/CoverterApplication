@@ -16,8 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
-
     Spinner spinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,13 +59,14 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         String USDValue = "" + Math.round(x/22000 * 100.0) / 100.0;
         edtUSDTxt.setText(USDValue);
         }
+        //Handling exception of empty text conversion attempt
         catch (Exception e){
             Toast toast = Toast.makeText(getApplicationContext(), "Error: Please enter a number", Toast.LENGTH_LONG);
             toast.show();
         }
     }
 
-    //Seond option
+    //Second option
     public void convertToLBP(View view) {
         try {
             TextView USDTxt = findViewById(R.id.numUSD);
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
             edtLBPTxt.setText(LBPValue);
 
         }
+        //Handling exception of empty text conversion attempt
         catch (Exception e){
             Toast toast = Toast.makeText(getApplicationContext(), "Error: Please enter a number", Toast.LENGTH_LONG);
             toast.show();
