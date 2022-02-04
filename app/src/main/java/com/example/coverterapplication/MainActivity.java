@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
             TextView edtLBPTxt = findViewById(R.id.numLBP);
             String LBPvalue = "" + Math.round(x*22000 * 100) / 100;
             edtLBPTxt.setText(LBPvalue);
+
         }
 
         catch (Exception e){
