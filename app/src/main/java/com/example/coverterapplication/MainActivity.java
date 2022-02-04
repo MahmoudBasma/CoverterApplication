@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         Spinner spinner = (Spinner) findViewById(R.id.dropList);
         spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
         List<String> currencies = new ArrayList<String>();
-        currencies.add("");currencies.add("USD"); currencies.add("LBP");
+        currencies.add("USD"); currencies.add("LBP");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, currencies);
 
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
