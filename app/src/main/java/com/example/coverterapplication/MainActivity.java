@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         TextView LBPTxt = findViewById(R.id.numLBP);
         double x = Double.parseDouble(LBPTxt.getText().toString());
         TextView edtUSDTxt = findViewById(R.id.numUSD);
-        String USDvalue = "" + Math.round(x/22000 * 100.0) / 100.0;
-        edtUSDTxt.setText(USDvalue);
+        String USDValue = "" + Math.round(x/22000 * 100.0) / 100.0;
+        edtUSDTxt.setText(USDValue);
         }
         catch (Exception e){
             Toast toast = Toast.makeText(getApplicationContext(), "Error: Please enter a number", Toast.LENGTH_LONG);
