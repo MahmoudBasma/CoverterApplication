@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
 
         List<String> currencies = new ArrayList<String>();
+        currencies.add("");
         currencies.add("USD"); currencies.add("LBP");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, currencies);
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         //Checking the selected option by the user
         if(item.equals("USD")) convertToUSD(view);
         else if(item.equals("LBP")) convertToLBP(view);
+        
 
     }
     //Needed to iherit this function due to the implementation of the interface
