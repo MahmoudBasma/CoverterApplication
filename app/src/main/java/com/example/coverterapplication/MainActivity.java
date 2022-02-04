@@ -17,7 +17,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
     Spinner spinner;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c07ac5b4e8cb7d45250a921e1c14244c5e3a843e
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
