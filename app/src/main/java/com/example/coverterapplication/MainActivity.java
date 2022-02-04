@@ -36,14 +36,18 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String item = parent.getItemAtPosition(position).toString();
+        //After choosing their option, the user will have a token with a message that the app is converting
         Toast.makeText(parent.getContext(), "converting to: " + item, Toast.LENGTH_SHORT).show();
+        //Checking the selected option by the user
         if(item.equals("USD")) convertToUSD(view);
         else if(item.equals("LBP")) convertToLBP(view);
 
     }
+    //Needed to iherit this function due to the implementation of the interface
     public void onNothingSelected(AdapterView<?> arg0) {
     }
 
+    //First Option
     public void convertToUSD(View view) {
         try{
         TextView LBPTxt = findViewById(R.id.numLBP);
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         }
     }
 
+    //Seond option
     public void convertToLBP(View view) {
         try {
             TextView USDTxt = findViewById(R.id.numUSD);
